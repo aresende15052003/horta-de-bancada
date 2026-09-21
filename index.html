@@ -227,9 +227,7 @@ footer a{color:#AEB8B2;text-decoration:none}
 .sticky .btn{min-height:48px;font-size:16px}
 
 /* entrada */
-.rv{opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+.rv,.rv.in{opacity:1!important;transform:none!important;transition:none!important}
 
 /* ecrãs médios e grandes */
 @media (min-width:760px){
@@ -288,22 +286,21 @@ section:not(.hero){content-visibility:auto;contain-intrinsic-size:900px}
   <div class="col">
     <span class="eyebrow">Método 3-7-10</span>
     <h1>Aprende a cultivar microvegetais frescos na tua cozinha em cerca de 10 dias.</h1>
-    <p class="sub">Um passo a passo simples para semear, germinar e colher em casa | mesmo sem jardim, varanda ou experiência.</p>
+    <p class="sub">Um passo a passo simples para semear, germinar e colher em casa, mesmo sem jardim, varanda ou experiência.</p>
     <!-- VSL Vimeo 3:4: autoplay sem som + botão para ativar áudio -->
     <div class="vsl vsl--vimeo" aria-label="Vídeo de apresentação Horta de Bancada">
       <iframe
         id="vimeoVsl"
         loading="eager"
         fetchpriority="high"
-        src="https://player.vimeo.com/video/1228419855?autoplay=1&amp;muted=0&amp;playsinline=1&amp;autopause=0&amp;loop=0&amp;preload=auto&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;player_id=0&amp;app_id=58479"
+        src="https://player.vimeo.com/video/1228419855?autoplay=1&amp;muted=1&amp;playsinline=1&amp;autopause=0&amp;loop=0&amp;preload=auto&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;player_id=0&amp;app_id=58479"
         frameborder="0"
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         style="position:absolute;top:0;left:0;width:100%;height:100%;"
         title="Horta de Bancada">
       </iframe>
-      <button class="vsl__fallback" id="vslFallback" type="button" aria-label="Iniciar vídeo"><span>▶ Iniciar vídeo</span></button>
-    </div>
+</div>
     <button class="vsl__sound" id="vslSound" type="button" aria-label="Ativar o som do vídeo">🔊 Ativar som</button>
 
     <a href="#planos" class="btn">Quero começar por 8,90 €</a>
@@ -645,75 +642,39 @@ section:not(.hero){content-visibility:auto;contain-intrinsic-size:900px}
 <script>
 (function(){
   const iframe = document.getElementById('vimeoVsl');
-  const fallbackButton = document.getElementById('vslFallback');
   if (!iframe || !window.Vimeo) return;
 
   const player = new Vimeo.Player(iframe);
-  let started = false;
-  let soundActive = false;
 
-  async function tryPlayWithSound(){
-    try{
-      await player.setMuted(false);
-      await player.setVolume(1);
-      await player.play();
-      started = true;
-      soundActive = true;
-      if (fallbackButton) fallbackButton.style.display = 'none';
-      return true;
-    }catch(e){
-      return false;
-    }
-  }
-
-  async function fallbackMutedAutoplay(){
+  // Autoplay confiável: começa mudo, porque Chrome/Safari bloqueiam
+  // reprodução automática com áudio na maioria das visitas.
+  async function startMuted(){
     try{
       await player.setMuted(true);
       await player.setVolume(0);
       await player.play();
-      started = true;
-      if (fallbackButton) fallbackButton.style.display = 'none';
     }catch(e){}
   }
 
-  async function startVideo(){
-    const ok = await tryPlayWithSound();
-    if (!ok) await fallbackMutedAutoplay();
-  }
+  player.ready().then(startMuted);
+  window.addEventListener('load', function(){ setTimeout(startMuted, 150); }, {once:true});
 
-  player.ready().then(startVideo);
-  window.addEventListener('load', function(){ setTimeout(startVideo, 120); }, {once:true});
-
-  // Se o navegador obrigar autoplay mudo, o primeiro toque/clique em qualquer lugar
-  // ativa o áudio automaticamente, sem mostrar botão de "Ativar som".
-  async function activateSoundOnInteraction(){
-    if (soundActive) return;
+  // Sem botão: no primeiro clique/toque/tecla do visitante, o som é ativado
+  // automaticamente e o vídeo continua do ponto em que está.
+  async function enableSound(){
     try{
       await player.setMuted(false);
       await player.setVolume(1);
       await player.play();
-      soundActive = true;
-      started = true;
-      if (fallbackButton) fallbackButton.style.display = 'none';
+      ['pointerdown','touchstart','keydown','click'].forEach(function(evt){
+        document.removeEventListener(evt, enableSound, true);
+      });
     }catch(e){}
   }
-  ['pointerdown','touchstart','keydown'].forEach(function(evt){
-    document.addEventListener(evt, activateSoundOnInteraction, {once:true, passive:true});
+
+  ['pointerdown','touchstart','keydown','click'].forEach(function(evt){
+    document.addEventListener(evt, enableSound, {once:true, capture:true, passive:true});
   });
-
-  setTimeout(async function(){
-    try{
-      const paused = await player.getPaused();
-      if (paused && fallbackButton) fallbackButton.style.display = 'flex';
-    }catch(e){}
-  }, 3200);
-
-  if (fallbackButton){
-    fallbackButton.addEventListener('click', async function(){
-      const ok = await tryPlayWithSound();
-      if (!ok) await fallbackMutedAutoplay();
-    });
-  }
 })();
 </script>
 </body>
