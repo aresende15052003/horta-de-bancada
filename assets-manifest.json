@@ -1,0 +1,162 @@
+{
+  "Alface murcha na gaveta do frigorífico": {
+    "orig": "./assets/originals/alface-murcha.png",
+    "width": 1122,
+    "height": 1402,
+    "source": "gaveta_de_legumes_com_alface_murcha.png",
+    "orig_bytes": 2220164,
+    "mode": "original-full-resolution"
+  },
+  "Vaso de manjericão seco junto à janela": {
+    "orig": "./assets/originals/manjericao-seco.png",
+    "width": 1122,
+    "height": 1402,
+    "source": "manjericão_seco_na_janela_ensolarada.png",
+    "orig_bytes": 1966972,
+    "mode": "original-full-resolution"
+  },
+  "Cozinha pequena de apartamento": {
+    "orig": "./assets/originals/cozinha-compacta.png",
+    "width": 1122,
+    "height": 1402,
+    "source": "cozinha_compacta_com_luz_natural.png",
+    "orig_bytes": 1988791,
+    "mode": "original-full-resolution"
+  },
+  "Legumes estragados ao lado do caixote": {
+    "orig": "./assets/originals/legumes-estragados.png",
+    "width": 1122,
+    "height": 1402,
+    "source": "composteira_com_vegetais_estragados.png",
+    "orig_bytes": 2382519,
+    "mode": "original-full-resolution"
+  },
+  "Tabuleiro cheio de microvegetais de rabanete": {
+    "orig": "./assets/originals/microverdes-rabanete.png",
+    "width": 1122,
+    "height": 1402,
+    "source": "microverdes_na_cozinha_iluminada.png",
+    "orig_bytes": 2502419,
+    "mode": "original-full-resolution"
+  },
+  "Tabuleiro tapado com peso por cima durante a fase de escuro": {
+    "orig": "./assets/originals/germinacao-sob-peso.png",
+    "width": 1122,
+    "height": 1402,
+    "source": "germinação_sob_peso_na_cozinha.png",
+    "orig_bytes": 1934629,
+    "mode": "original-full-resolution"
+  },
+  "Tabuleiro junto à janela com água no tabuleiro de baixo": {
+    "orig": "./assets/originals/mudas-na-janela.png",
+    "width": 1122,
+    "height": 1402,
+    "source": "mudas_frescas_junto_à_janela.png",
+    "orig_bytes": 1962026,
+    "mode": "original-full-resolution"
+  },
+  "Mãos a cortar microvegetais com uma tesoura": {
+    "orig": "./assets/originals/corte-microvegetais.png",
+    "width": 1371,
+    "height": 1148,
+    "source": "a_cozy_moody_kitchen_windowsill_still_life_scene.png",
+    "orig_bytes": 2131998,
+    "mode": "original-full-resolution"
+  },
+  "Feedback de Inês Martins no Instagram sobre o primeiro cultivo de microvegetais": {
+    "orig": "./assets/originals/feedback-ines.png",
+    "width": 941,
+    "height": 1672,
+    "source": "a_vertical_smartphone_screenshot_of_an_instagram_d.png",
+    "orig_bytes": 1387495,
+    "mode": "original-full-resolution"
+  },
+  "Feedback de Beatriz Costa no Instagram sobre o cultivo de microvegetais": {
+    "orig": "./assets/originals/feedback-beatriz.jpeg",
+    "width": 938,
+    "height": 1600,
+    "source": "WhatsApp Image 2026-09-18 at 01.41.05.jpeg",
+    "orig_bytes": 137598,
+    "mode": "original-full-resolution"
+  },
+  "Feedback de Carolina Mendes no WhatsApp sobre o primeiro tabuleiro de microvegetais": {
+    "orig": "./assets/originals/feedback-carolina.jpeg",
+    "width": 902,
+    "height": 1600,
+    "source": "WhatsApp Image 2026-09-18 at 01.41.06.jpeg",
+    "orig_bytes": 187075,
+    "mode": "original-full-resolution"
+  },
+  "Mockup do bónus SOS Tabuleiro": {
+    "orig": "./assets/originals/bonus-sos-tabuleiro.png",
+    "width": 1254,
+    "height": 1254,
+    "source": "mockup_horta_de_bancada_sos_tabuleiro.png",
+    "orig_bytes": 1659398,
+    "mode": "original-full-resolution"
+  },
+  "Mockup do bónus Plano Estação Fria": {
+    "orig": "./assets/originals/bonus-estacao-fria.png",
+    "width": 1254,
+    "height": 1254,
+    "source": "plano_de_cultivo_no_inverno.png",
+    "orig_bytes": 2006219,
+    "mode": "original-full-resolution"
+  },
+  "Mockup do bónus Rebentos em Frasco": {
+    "orig": "./assets/originals/bonus-rebentos-frasco.png",
+    "width": 1254,
+    "height": 1254,
+    "source": "a_clean_product_mockup_marketing_image_on_a_transp.png",
+    "orig_bytes": 2096993,
+    "mode": "original-full-resolution"
+  },
+  "Mockup do bónus Lista de Compras Inteligente": {
+    "orig": "./assets/originals/bonus-lista-compras.png",
+    "width": 1254,
+    "height": 1254,
+    "source": "a_clean_isolated_product_mockup_graphic_on_a_tran.png",
+    "orig_bytes": 2305141,
+    "mode": "original-full-resolution"
+  },
+  "Mockup do bónus Pequenos Hortelãos": {
+    "orig": "./assets/originals/bonus-pequenos-hortelaos.png",
+    "width": 1254,
+    "height": 1254,
+    "source": "a_clean_high_quality_photoreal_graphic_mockup.png",
+    "orig_bytes": 2497904,
+    "mode": "original-full-resolution"
+  },
+  "Mockup do bónus Tabela de Nutrientes": {
+    "orig": "./assets/originals/bonus-tabela-nutrientes.png",
+    "width": 1254,
+    "height": 1254,
+    "source": "a_clean_product_ebook_mockup_composition_on_transp.png",
+    "orig_bytes": 2219992,
+    "mode": "original-full-resolution"
+  },
+  "Mockup do bónus Mapa de Oportunidades": {
+    "orig": "./assets/originals/bonus-mapa-oportunidades.png",
+    "width": 1254,
+    "height": 1254,
+    "source": "mapa_de_oportunidades_em_microvegetais.png",
+    "orig_bytes": 2555738,
+    "mode": "original-full-resolution"
+  },
+  "Cozinha com vários tabuleiros de microvegetais": {
+    "orig": "./assets/originals/cozinha-varios-tabuleiros.png",
+    "width": 1371,
+    "height": 1148,
+    "source": "wide_cozy_realistic_indoor_kitchen_scene_with_na.png",
+    "orig_bytes": 2382363,
+    "mode": "original-full-resolution"
+  },
+  "Mockup do produto Horta de Bancada com guia, materiais e apoio visual": {
+    "orig": "./assets/originals/mockup-principal.png",
+    "width": 1254,
+    "height": 1254,
+    "source": "kit_horta_de_bancada_em_destaque.png",
+    "orig_bytes": 2601726,
+    "mode": "original-full-resolution"
+  }
+}
